@@ -2,6 +2,10 @@ import Mongoose from 'mongoose';
 import TodoModel from '../models/todo.model';
 import ErrorCatching  from '../functions/error/error';
 
+/**
+ * Get todos in database
+ * @return list of todos
+ */
 const getTodos = async () => {
     try {
         return  await TodoModel.find();
@@ -13,6 +17,12 @@ const getTodos = async () => {
     }
 }
 
+/**
+ * 
+ * @param {*} todo
+ * Create a todo in database
+ * @return object created in Mongo database  
+ */
 const postTodos = async (todo) => {
     const todoObject = new TodoModel(todo);
     if (todoObject.JoiValidate(todo).error) throw { code: 400, message: 'payload doesn\'t correspond to predefined model'};
