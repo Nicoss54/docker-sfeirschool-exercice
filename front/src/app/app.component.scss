@@ -1,0 +1,12 @@
+#app-content {
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-flow: column;
+
+    #main-content {
+        flex: 2;
+        overflow: auto;
+    }
+}
+

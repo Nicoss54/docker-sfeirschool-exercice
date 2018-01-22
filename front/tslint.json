@@ -121,13 +121,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "sfeir-docker",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      "sfeir-docker",
       "kebab-case"
     ],
     "no-output-on-prefix": true,
