@@ -31,7 +31,7 @@ This app is devided into three parts:
 * Create a docker container named todo-frontend which expose the port 4200
 * Check if the container is correctly created (display the logs)
 * Go to the url: http://localhost:4200 ( A UI will must appear )
-* Pull your image onb the docker hub
+* Pull your image on the docker hub
 
 ### Networks
 
@@ -49,7 +49,7 @@ Let's go to do that
 
 ### Docker compose for more fun
 
-* Remove all your container and image
+* Remove all your containers and images
 * Create a docker compose, using your image on the docker hub
 * Use docker compose command
 * Check if all work that you want
