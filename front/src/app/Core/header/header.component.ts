@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 
 export class HeaderComponent {
     constructor() { }
+
+    imgPath: String = 'assets/image/sfeir-logo-bleu.png';
 }
