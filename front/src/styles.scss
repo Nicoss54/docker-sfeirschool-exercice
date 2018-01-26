@@ -2,6 +2,7 @@
 
 @import './app/Core/header/header.component.scss';
 @import './app/Core/footer/footer.component.scss';
+@import './app/Feature/todo/create-and-display/create-and-display.component.scss';
 
 html {
     height: 100%;
@@ -34,6 +35,10 @@ html {
             display: flex;
             flex-flow: row;
             align-items: center;
+        }
+
+        .right {
+            float: right;
         }
     }
 }
