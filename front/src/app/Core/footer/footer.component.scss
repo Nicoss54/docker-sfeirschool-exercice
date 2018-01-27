@@ -1,0 +1,21 @@
+#footer-container {
+    height: 100%;
+    width:100%;
+    border-top: 2px solid #e0e0e0;
+    display: flex;
+    flex-flow: row; 
+
+
+    .owner-container {
+        width: 40%;
+        height: 100%;
+        margin-left: 3%;
+        i {
+            margin-right: 2%;
+        }
+        span {
+            font-family: 'Tangerine', serif;
+            font-size: 30px;
+        }
+    }
+}

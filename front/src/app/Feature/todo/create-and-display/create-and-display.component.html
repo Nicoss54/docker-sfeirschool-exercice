@@ -1,0 +1,25 @@
+<div id="todo" class="container full-height">
+  <form id="container-form-todo" #todoForm="ngForm" (ngSubmit)="submitTodoForm(todoForm.value)">
+    <div class="form input-field">
+      <input placeholder="{{constant.placeholderTodoInput}}" type="text" name="todo" ngModel required />
+    </div>
+    <div class="button-container input-field">
+      <button type="submit" [disabled]="!todoForm.form.valid" class="btn-floating btn-large waves-effect waves-light">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+      </button>
+    </div>
+  </form>
+
+  <div id="list-todos" *ngIf="todos">
+    <ul class="collection with-header full-height">
+      <li class="collection-header">
+        <span class="title">{{constant.titleList}}</span>
+      </li>
+      <div class="container-task">
+        <li *ngFor="let todoTask of todos" class="collection-item">
+          <span>{{todoTask.todo}}</span>
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>
