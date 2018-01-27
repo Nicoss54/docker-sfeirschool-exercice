@@ -9,7 +9,7 @@ import ErrorCatching  from '../functions/error/error';
 const getTodos = async () => {
     let todos = [];
     try {
-        return await TodoModel.find().cursor().eachAsync((todo) => {
+        return await TodoModel.find().select({todo:1}).cursor().eachAsync((todo) => {
             todos = [...todos, todo];
         }).then(() => todos);       
     } catch (err) {
