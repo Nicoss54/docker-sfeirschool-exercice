@@ -4,6 +4,9 @@
     width: 100%;
     display: flex;
     flex-flow: row;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    justify-content: space-around;
     .form {
       width: 80%;
       margin-right: 5%;
@@ -26,4 +29,17 @@
       }
     }
   }
+
+  #list-todos {
+    height: 39%;
+
+    .title {
+      font-weight: bold;
+    }
+    .container-task  {
+      height: 81%;
+      overflow: auto;
+    }
+  }
+
 }

@@ -6,4 +6,5 @@ export class AppConstant {
     public static get placeholderTodoInput(): string { return 'My Todo Task'; }
     public static get errorToastPostTodos(): string { return 'Error on creating todo'; }
     public static get successToastPostTodos(): string { return 'Todo Created'; }
+    public static get titleList(): string { return 'My todo Task List'; }
 }
