@@ -7,8 +7,11 @@ import ErrorCatching  from '../functions/error/error';
  * @return list of todos
  */
 const getTodos = async () => {
+    let todos = [];
     try {
-        return  await TodoModel.find();
+        return await TodoModel.find().cursor().eachAsync((todo) => {
+            todos = [...todos, todo];
+        }).then(() => todos);       
     } catch (err) {
         if (err) {
             console.error(err);
