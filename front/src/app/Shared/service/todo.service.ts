@@ -9,7 +9,15 @@ import { Todo } from '../../Models/todo.model';
 export class TodoService {
     constructor(private _httpClient: HttpClient) { }
 
+    /**
+     * Service to get my list of todos
+     */
     getTodos(): Observable<Object> {
         return this._httpClient.get(environment.baseUrl + environment.api.todos);
     }
+
+    postTodos(todo: Todo): Observable<Object> {
+        return this._httpClient.post(environment.baseUrl + environment.api.todos, todo);
+    }
+
 }
