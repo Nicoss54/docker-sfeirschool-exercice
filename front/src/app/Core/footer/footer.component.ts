@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppConstant } from '../../Shared/constant/app.constant';
 
 @Component({
     selector: 'sfeir-docker-footer',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
 })
 
 export class FooterComponent {
-    constructor() { }
+    constructor() {}
+    constant = AppConstant;
 }

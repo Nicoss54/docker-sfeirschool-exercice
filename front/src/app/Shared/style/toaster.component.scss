@@ -1,0 +1,13 @@
+#toast-container {
+    top: 15% !important;
+    .sucess {
+        color: white !important;
+        background-color: #388e3c !important;
+        border-radius: 25px;
+    }
+    .error {
+        color: white !important;
+        background-color: #b71c1c;
+        border-radius: 25px;
+    }
+}

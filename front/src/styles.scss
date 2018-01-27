@@ -3,6 +3,8 @@
 @import './app/Core/header/header.component.scss';
 @import './app/Core/footer/footer.component.scss';
 @import './app/Feature/todo/create-and-display/create-and-display.component.scss';
+@import './app/Core/loading/loading.component.scss';
+@import './app/Shared/style/toaster.component.scss';
 
 html {
     height: 100%;

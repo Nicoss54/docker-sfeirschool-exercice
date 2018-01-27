@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule} from '@angular/common/http';
+import { MaterializeModule } from './materialize.module';
+import { TodoService } from './service/todo.service';
+import { AppService } from './service/app.service';
+
 
 @NgModule({
-    imports: [ CommonModule ],
-    exports: [ CommonModule ],
+    imports: [ CommonModule, HttpClientModule, MaterializeModule ],
+    exports: [ CommonModule, MaterializeModule ],
     declarations: [],
-    providers: [],
+    providers: [ TodoService, AppService ],
 })
 export class SharedModule { }
