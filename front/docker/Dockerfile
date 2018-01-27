@@ -11,4 +11,4 @@ ADD . /app
 # install your dependencies of your project
 RUN npm install
 # serve your application
-ENTRYPOINT ["/usr/local/bin/npm","run","start"]
+ENTRYPOINT ["/usr/local/bin/npm","run","start-docker"]
