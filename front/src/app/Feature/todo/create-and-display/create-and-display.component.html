@@ -10,13 +10,13 @@
     </div>
   </form>
 
-  <div id="list-todos" *ngIf="todos">
+  <div id="list-todos" *ngIf="Todos">
     <ul class="collection with-header full-height">
       <li class="collection-header">
         <span class="title">{{constant.titleList}}</span>
       </li>
       <div class="container-task">
-        <li *ngFor="let todoTask of todos" class="collection-item">
+        <li *ngFor="let todoTask of Todos" class="collection-item">
           <span>{{todoTask.todo}}</span>
         </li>
       </div>

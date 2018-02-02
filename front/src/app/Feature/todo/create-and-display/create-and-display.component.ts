@@ -20,7 +20,7 @@ export class TodoCreateAndDisplayComponent implements OnInit {
         this._appService.isLoading = true;
     }
 
-    todos: Todo[];
+    private todos = [new Todo()];
     constant = AppConstant;
     @ViewChild('todoForm') todoForm: NgForm;
 
@@ -76,5 +76,13 @@ export class TodoCreateAndDisplayComponent implements OnInit {
     submitTodoForm(todo: Todo) {
         this.postTodos(todo);
         this.resetTodoForm();
+    }
+
+    /**
+     * Getter todos for accessing private value in DOM
+     * @returns Todo[]
+     */
+    public get Todos(): Todo[] {
+        return this.todos;
     }
 }

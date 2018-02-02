@@ -5,6 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "serve-aot": "ng serve --aot",
     "build": "ng build --prod",
     "lint": "ng lint",
     "start-docker": "ng serve --host 0.0.0.0 --port 4200"
