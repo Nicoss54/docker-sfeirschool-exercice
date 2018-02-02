@@ -10,7 +10,7 @@
     </div>
   </form>
 
-  <div id="list-todos" *ngIf="Todos">
+  <div id="list-todos" *ngIf="Todos && Todos.length !== 0">
     <ul class="collection with-header full-height">
       <li class="collection-header">
         <span class="title">{{constant.titleList}}</span>
