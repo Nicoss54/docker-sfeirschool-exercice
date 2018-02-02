@@ -20,7 +20,7 @@ export class TodoCreateAndDisplayComponent implements OnInit {
         this._appService.isLoading = true;
     }
 
-    todos: Todo[];
+    todos = [new Todo()];
     constant = AppConstant;
     @ViewChild('todoForm') todoForm: NgForm;
 

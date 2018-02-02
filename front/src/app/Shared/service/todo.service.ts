@@ -12,12 +12,12 @@ export class TodoService {
     /**
      * Service to get my list of todos
      */
-    getTodos(): Observable<Object> {
-        return this._httpClient.get(environment.baseUrl + environment.api.todos);
+    getTodos(): Observable<Array<Todo>> {
+        return this._httpClient.get<Array<Todo>>(environment.baseUrl + environment.api.todos);
     }
 
-    postTodos(todo: Todo): Observable<Object> {
-        return this._httpClient.post(environment.baseUrl + environment.api.todos, todo);
+    postTodos(todo: Todo): Observable<Todo> {
+        return  this._httpClient.post(environment.baseUrl + environment.api.todos, todo);
     }
 
 }

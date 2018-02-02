@@ -1,4 +1,3 @@
-export interface Todo {
-    _id: String;
-    todo: String;
+export class Todo {
+    constructor (private _id?: string, private todo?: string) {}
 }

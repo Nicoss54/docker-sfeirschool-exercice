@@ -8,4 +8,8 @@ import { AppService } from './Shared/service/app.service';
 })
 export class AppComponent {
   constructor(private _appService: AppService) {}
+
+  public get AppService(): AppService {
+    return this._appService;
+  }
 }
