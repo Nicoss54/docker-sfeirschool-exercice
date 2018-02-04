@@ -3,15 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { TodoCreateAndDisplayComponent } from './Feature/todo/create-and-display/create-and-display.component';
 import { ModuleWithProviders } from '@angular/compiler/src/core';
 
-// const appRoutes: Routes = [
-//     { path: '', redirectTo: '/todos', pathMatch: 'full' },
-//     { path: 'todos', component: TodoCreateAndDisplayComponent }
-// ];
-
 const appRoutes: Routes = [
     { path: '', loadChildren: 'app/Feature/todo/todo.module#TodoModule'}
 ];
-
 
 @NgModule({
     imports: [ RouterModule.forRoot(appRoutes)],
@@ -19,8 +13,5 @@ const appRoutes: Routes = [
     declarations: [],
     providers: [],
 })
-
-
-// export const appRouter: ModuleWithProviders = RouterModule.forRoot(appRoutes);
 
 export class AppRoutingModule {}

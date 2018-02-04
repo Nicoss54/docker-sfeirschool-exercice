@@ -6,8 +6,6 @@ const todoRoutes: Routes = [
     { path: '', component: TodoCreateAndDisplayComponent}
 ];
 
- // export const todoRouting = RouterModule.forChild(todoRoutes);
-
  @NgModule ( {
      imports: [ RouterModule.forChild(todoRoutes)],
      exports: [ RouterModule],
