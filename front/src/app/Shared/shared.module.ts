@@ -11,6 +11,6 @@ import { AppService } from './service/app.service';
     imports: [ CommonModule, HttpClientModule, MaterializeModule, FormsModule ],
     exports: [ CommonModule, MaterializeModule, FormsModule ],
     declarations: [],
-    providers: [ TodoService, AppService ],
+    providers: [ TodoService ],
 })
 export class SharedModule { }
