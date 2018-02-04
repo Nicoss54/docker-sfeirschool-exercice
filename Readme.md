@@ -1,37 +1,37 @@
-# Summary Project: A beautifull Todolist in Docker
+# Summary Project: A beautiful Todolist app containerized using Docker
 
 ### Introduction
 
-Hello student, this is your final mission ( if you accepted it) to complete this SFEIR School. This mission consist to deploy an app in your local docker.
+Hello student, this is your final mission (if you accept it) to complete this SFEIR School. This mission consists to deploy an complete application using Docker.
 
-This app is devided into three parts: 
-* Mongo Database to persist your data
-* Back-end which consist on an API REST write in node js whith the HAPI framework
-* Front-end which consist on a todolist write in Angular
+This app is divided into three parts: 
+* a Mongo Database to persist your data;
+* a back-end which exposes an API REST written with NodeJs and the HAPI framework;
+* a front-end which consists on a todolist creations written with Angular.
 
 
 ### Mongo Database
 
-* Pull an offcial image of Mongo database from the docker hub/registry
-* Create a docker container named todo-database which expose the port 27017
+* Pull an official image of Mongo database from the docker hub
+* Create a docker container named todo-database which exposes the port 27017
 * Check if the database is correctly started (display the logs of the container)
 
 ### Backend
 
-* Create a Docker file
-* From your Docker file buid an image named todo-backend-image
-* Create a docker container named todo-backend which expose the port 3000
-* Check if the container is correctly created ( display the logs, normally there is an error: connection to database impossible)
-* Pull your image on the docker hub
+* Create the Dockerfile
+* From your Dockerfile buid an image named todo-backend-image
+* Create a docker container named todo-backend which exposes the port 3000
+* Check if the container is correctly created (display the logs, normally there is an error: connection to database impossible)
+* Push your image onto the docker hub
 
 ### Frontend
 
-* Create a Docker file
+* Create the Dockerfile
 * From your docker file build an image named todo-frontend-image
-* Create a docker container named todo-frontend which expose the port 4200
+* Create a docker container named todo-frontend which exposes the port 4200
 * Check if the container is correctly created (display the logs)
-* Go to the url: http://localhost:4200 ( A UI will must appear )
-* Pull your image on the docker hub
+* Go to the url: http://localhost:4200 (A UI must appear)
+* Push your image onto the docker hub
 
 ### Networks
 
@@ -40,17 +40,16 @@ Indeed, the front part must not communicate with the database part. Only the bac
 
 Let's go to do that
 
-* Create a network named todo-db with an alias named mongo. This network is a bridge type
+* Create a network named todo-db with an alias named mongo. This network is a bridge type.
 * Link your container database with the container backend on this network
 * Check if your container back start without errors
 * Create a network named todo-web. This network is also a bridge type
 * Link your container front with the container back on this network
-* Go to http://localhost:4200 and create a Todo (normally it works)
+* Go to http://localhost:4200 and create your first todo! (normally it works)
 
 ### Docker compose for more fun
 
 * Remove all your containers and images
-* Create a docker compose, using your image on the docker hub
-* Use docker compose command
-* Check if all work that you want
-
+* Create a Docker compose, using your image on the docker hub
+* Use docker compose command to start everything
+* Check if everything works as expected
