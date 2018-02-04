@@ -4,14 +4,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CoreModule } from './Core/core.module';
-import { FeatureModule } from './Feature/feature.module';
 import { AppRoutingModule } from './app-routing.module';
 
 /**
  * Component Import
  */
 import { AppComponent } from './app.component';
-
+import { AppService } from './Shared/service/app.service';
 
 @NgModule({
   declarations: [
@@ -21,10 +20,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    FeatureModule,
 
   ],
-  providers: [],
+  providers: [ AppService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
