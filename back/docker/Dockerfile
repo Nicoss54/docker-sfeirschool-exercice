@@ -1,4 +1,4 @@
-FROM node:6.11.0
+FROM node:8.9.4
 EXPOSE 3000
 RUN mkdir app
 WORKDIR /app
