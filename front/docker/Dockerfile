@@ -1,5 +1,5 @@
 # create image with the lts version of node
-FROM node:6.11.0
+FROM node:8.9.4
 # expose your app port
 EXPOSE 4200
 # create directory where you app will be placed

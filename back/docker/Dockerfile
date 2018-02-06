@@ -4,4 +4,4 @@ RUN mkdir app
 WORKDIR /app
 ADD . /app
 RUN npm install
-ENTRYPOINT [ "/usr/local/bin/npm", "start" ]
+ENTRYPOINT [ "/usr/local/bin/npm", "start-container" ]
