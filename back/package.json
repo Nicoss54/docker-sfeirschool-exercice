@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev": "nodemon server.js --exec babel-node",
-    "start": "babel-node server.js"
+    "start-container": "NODE_ENV=container babel-node server.js"
   },
   "repository": {
     "type": "git",
