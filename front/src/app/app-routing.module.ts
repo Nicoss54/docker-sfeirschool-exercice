@@ -4,7 +4,8 @@ import { TodoCreateAndDisplayComponent } from './Feature/todo/create-and-display
 import { ModuleWithProviders } from '@angular/compiler/src/core';
 
 const appRoutes: Routes = [
-    { path: '', loadChildren: 'app/Feature/todo/todo.module#TodoModule'}
+    { path: '', redirectTo: '/todos', pathMatch: 'full'},
+    { path: 'todos', loadChildren: 'app/Feature/todo/todo.module#TodoModule'}
 ];
 
 @NgModule({

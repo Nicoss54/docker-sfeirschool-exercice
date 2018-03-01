@@ -53,3 +53,59 @@ Let's go to do that
 * Create a Docker compose, using your image on the docker hub
 * Use docker compose command to start everything
 * Check if everything works as expected
+
+
+### Solution
+
+* Database Parts
+
+```docker pull mongo```
+
+
+```docker container run --name mongodb -d -p 21017:27017 mongo ```
+
+* network Part
+
+``` docker network create db_net ```
+
+```docker network create web_net ```
+
+* link database -> back
+
+A partir du dossier back on crée l'image suivante
+
+``` docker image build -f docker/Dockerfile -t back-image:1.0.0 . ```
+
+On connecte la base de donnée au réseau db_net
+
+``` docker network connect db_net --alias mongodb mongodb ```
+
+Eteindre le container mongo et le rallumer pour prendre en compte la connexion en compte
+
+On crée le container back et on le connect au réseau db_net
+
+``` docker container run --name back -d -p 3000:3000 --network=db_net back-image:1.0.0 ```
+
+
+Rendez vous sur l'adresse localhost:3000/api/documentation 
+
+* link front -> back
+
+On link le back au réseau web_net
+
+``` docker network connect web_net --alias back back ```
+
+Eteindre le container et le rallumer pour prendre la nouvelle connexion en compte
+
+On crée l'image front à partir du dossier front
+
+```docker image build -f docker/Dockerfile -t front-image:1.0.0 .```
+
+On crée le container front et on link au web_net
+
+```docker container run --name front -d -p 4200:4200 --network=web_net front-image:1.0.0```
+
+Rendez vous à l'adresse localhost:4200
+
+
+
