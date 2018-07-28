@@ -22,7 +22,9 @@
     "MONGO",
     "MONGOOSE"
   ],
-  "author": "Nicolas Frizzarin",
+  "author": {
+    "name": "Nicolas Frizzarin"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Nicoss54/docker-sfeirschool-exercice/issues"
